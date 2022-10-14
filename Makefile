@@ -45,4 +45,8 @@ console:
 test:
 	$(DC) exec truffle truffle test
 
+# Install node package with argument PACKAGE
+install-package:
+	$(DC) exec truffle npm install $(PACKAGE)
+
 .PHONY: build start stop compile migrate console test
