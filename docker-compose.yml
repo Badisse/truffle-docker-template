@@ -10,11 +10,6 @@ services:
   truffle:
     build:
       context: truffle
-    healthcheck:
-      test: curl -sf -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' localhost:8545
-      interval: 5s
-      timeout: 5s
-      retries: 5
     ports:
       - 3000:3000
     tty: true
