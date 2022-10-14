@@ -14,4 +14,7 @@ services:
       - 3000:3000
     tty: true
     volumes:
+      - $SSH_AUTH_SOCK:/ssh-agent
       - ./truffle:/src
+    environment:
+      SSH_AUTH_SOCK: /ssh-agent
