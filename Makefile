@@ -1,4 +1,5 @@
 DC = docker compose
+NETWORK = development
 
 # Get help
 help:
@@ -35,7 +36,7 @@ compile:
 
 # Deploy contracts
 migrate:
-	$(DC) exec truffle truffle migrate
+	$(DC) exec truffle truffle migrate --network $(NETWORK)
 
 # Open truffle console
 console:
